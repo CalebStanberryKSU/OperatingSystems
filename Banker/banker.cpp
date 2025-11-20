@@ -6,7 +6,6 @@
 #include <fstream>
 #include <stdlib.h>
 using namespace std;
-int asciiToInt(char);
 int main()
 {
     //Processes P0, P1, P2, P3, P4
@@ -28,34 +27,21 @@ int main()
     if (in.fail())
         exit(1);
 
-    for (int i = 0; i < 5; ++i)
-    {
-        for (int j = 0; j < 3; ++j)
-        {
-            in.get(input);
-            result = asciiToInt(input);
-            allocation[i][j] = result;
-        }
-        in.get(ch);
+for (int i = 0; i < 5; i++) {
+    for (int j = 0; j < 3; j++) {
+        in >> allocation[i][j];
     }
+}
 
-    for (int i = 0; i < 5; ++i)
-    {
-        for (int j = 0; j < 3; ++j)
-        {
-            in.get(input);
-            result = asciiToInt(input);
-            max[i][j] = result;
-        }
-        in.get(ch);
+for (int i = 0; i < 5; i++) {
+    for (int j = 0; j < 3; j++) {
+        in >> max[i][j];
     }
+}
 
-    for (int i = 0; i < 3; ++i)
-    {
-        in.get(input);
-        result = asciiToInt(input);
-        available[i] = result;
-    }
+for (int i = 0; i < 3; i++) {
+    in >> available[i];
+}
 
     int f[n], ans[n], ind = 0;
     for (int k = 0; k < n; k++)
@@ -121,10 +107,4 @@ int main()
     }
 
     return (0);
-}
-
-//function to turn ascii input to integer
-int asciiToInt(char ch)
-{
-    return int(ch) - 48;
 }
