@@ -41,8 +41,8 @@ P3 -> P4 -> P1 -> P2 -> P0
 
 *Compile & Run*  
 Run the following in terminal: 
-g++ banker.cpp -o banker  
-./banker  
+g++ banker.cpp -o banker.o  
+./banker.o  
 
 *Input File Format*  
 input.txt consists of 11 lines:  
